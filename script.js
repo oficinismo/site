@@ -60,4 +60,3 @@ window.addEventListener("click", (event) => {
     cerrarModal();
   }
 });
-
