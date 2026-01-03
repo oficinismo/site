@@ -2,146 +2,84 @@ import os
 import yaml
 import markdown
 
-IMAGES_DIR = "images"      # Carpeta de portadas en jpg
-PDF_DIR = "pdfs"           # Carpeta de PDFs
-CATALOGO_DIR = "catalogo"  # Carpeta de MDs
+CATALOGO_DIR = "catalogo"
 OUTPUT_FILE = "index.html"
 
-def leer_archivo(path):
-    with open(path, "r", encoding="utf-8") as f:
+def parse_markdown(file_path):
+    """
+    Extrae el front-matter YAML y el contenido Markdown de un archivo .md
+    """
+    with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Separar front-matter YAML y cuerpo
     if content.startswith("---"):
         _, fm, body = content.split("---", 2)
         meta = yaml.safe_load(fm)
-        return meta, body.strip()
-    return {}, content
+        html_body = markdown.markdown(body.strip())
+        return meta, html_body
+    else:
+        return {}, markdown.markdown(content)
 
-def generar_html(items):
+def build_index():
     html_items = []
-    for meta, body in items:
-        desc_html = markdown.markdown(body)
-        imagen = meta.get("imagen", "")
-        img_path = f"{IMAGES_DIR}/{imagen}" if imagen else ""
-        pdf = meta.get("pdf", "")
-        pdf_path = f"{PDF_DIR}/{pdf}" if pdf else ""
-        html_items.append(f"""
-        <div class="comic-card"
-             data-titulo="{meta.get('titulo','')}"
-             data-autor="{meta.get('autor','')}"
-             data-editorial="{meta.get('editorial','')}"
-             data-anio="{meta.get('anio','')}"
-             data-precio="{meta.get('precio','')}"
-             data-pdf="{pdf_path}">
-            <img src="{img_path}" alt="{meta.get('titulo','')}">
-            <h3>{meta.get('titulo','')}</h3>
-            <p><strong>Autor:</strong> {meta.get('autor','')}</p>
-            <p><strong>Editorial:</strong> {meta.get('editorial','')}</p>
-            <p><strong>Año:</strong> {meta.get('anio','')}</p>
-            <p><strong>Precio:</strong> CLP {meta.get('precio','')}</p>
-            <div class="descripcion" style="display:none;">{desc_html}</div>
-        </div>
-        """)
-    return "\n".join(html_items)
 
-def main():
-    items = []
-    for fname in os.listdir(CATALOGO_DIR):
-        if fname.endswith(".md"):
-            meta, body = leer_archivo(os.path.join(CATALOGO_DIR, fname))
-            items.append((meta, body))
+    for filename in os.listdir(CATALOGO_DIR):
+        if filename.endswith(".md"):
+            filepath = os.path.join(CATALOGO_DIR, filename)
+            meta, body = parse_markdown(filepath)
 
-    contenido = generar_html(items)
+            titulo = meta.get("titulo", "")
+            autor = meta.get("autor", "")
+            editorial = meta.get("editorial", "")
+            anio = meta.get("anio", "")
+            precio = meta.get("precio", "")
+            imagen = meta.get("imagen", "")       # portada en images/
+            paginas = meta.get("paginas", "")     # subcarpeta en images/
 
-    html = f"""
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Catálogo de Cómics</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="site-header">
-        <img src="images/header.jpg" alt="Header del catálogo">
-        <h1>Catálogo de Cómics</h1>
-    </header>
-
-    <div class="catalogo">
-        {contenido}
-    </div>
-
-    <!-- Modal -->
-    <div id="comic-modal" class="comic-modal">
-        <div class="comic-modal-content">
-            <span id="close-comic" class="close">&times;</span>
-            <div id="comic-modal-body" class="modal-info"></div>
-            <div class="modal-pdf">
-                <iframe id="comic-pdf" style="width:100%;height:600px;" frameborder="0"></iframe>
+            card_html = f"""
+            <div class="comic-card"
+                 data-titulo="{titulo}"
+                 data-autor="{autor}"
+                 data-editorial="{editorial}"
+                 data-anio="{anio}"
+                 data-precio="{precio}"
+                 data-paginas="{paginas}">
+              <img src="images/{imagen}" alt="{titulo}">
+              <h3>{titulo}</h3>
             </div>
+            """
+            html_items.append(card_html)
+
+    # Plantilla básica del index.html
+    html_output = f"""
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Catálogo de Cómics</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <h1>Catálogo de Cómics</h1>
+      <div class="catalogo">
+        {''.join(html_items)}
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="close">&times;</span>
+          <div id="modal-body"></div>
         </div>
-    </div>
+      </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {{
-            const cards = document.querySelectorAll('.comic-card');
-            const modal = document.getElementById('comic-modal');
-            const modalBody = document.getElementById('comic-modal-body');
-            const pdfFrame = document.getElementById('comic-pdf');
-            const closeBtn = document.getElementById('close-comic');
-
-            // Configuración de tu repo en GitHub
-            const repoUser = "oficinismo";
-            const repoName = "catalogo";
-            const branch = "main";
-
-            cards.forEach(card => {{
-                card.addEventListener('click', () => {{
-                    const titulo = card.getAttribute('data-titulo');
-                    const autor = card.getAttribute('data-autor');
-                    const editorial = card.getAttribute('data-editorial');
-                    const anio = card.getAttribute('data-anio');
-                    const precio = card.getAttribute('data-precio');
-                    const descripcion = card.querySelector('.descripcion')?.innerHTML || '';
-                    const pdf = card.getAttribute('data-pdf'); // ej: "pdfs/catalogo1.pdf"
-
-                    modalBody.innerHTML = `
-                        <h2>${{titulo}}</h2>
-                        <p><strong>Autor:</strong> ${{autor}}</p>
-                        <p><strong>Editorial:</strong> ${{editorial}}</p>
-                        <p><strong>Año:</strong> ${{anio}}</p>
-                        <p><strong>Precio:</strong> CLP ${{precio}}</p>
-                        <div class="descripcion">${{descripcion}}</div>
-                    `;
-
-                    // Construir URL pública para Google Docs Viewer
-                    const pdfUrl = `https://docs.google.com/viewer?url=https://raw.githubusercontent.com/${{repoUser}}/${{repoName}}/${{branch}}/${{pdf}}&embedded=true`;
-
-                    pdfFrame.src = pdfUrl;
-                    modal.style.display = 'flex';
-                }});
-            }});
-
-            closeBtn.addEventListener('click', () => {{
-                modal.style.display = 'none';
-                pdfFrame.src = "";
-            }});
-
-            window.addEventListener('click', (event) => {{
-                if (event.target === modal) {{
-                    modal.style.display = 'none';
-                    pdfFrame.src = "";
-                }}
-            }});
-        }});
-    </script>
-</body>
-</html>
-"""
+      <script src="script.js"></script>
+    </body>
+    </html>
+    """
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html_output)
 
 if __name__ == "__main__":
-    main()
+    build_index()
