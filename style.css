@@ -76,24 +76,26 @@ h1 {
   width: 100%; height: 100%;  /* cubre toda la ventana */
   background-color: rgba(0,0,0,0.7);
   z-index: 3000;
+
   display: flex;
   justify-content: center;    /* centra horizontal */
   align-items: center;        /* centra vertical */
 }
 
-/* Contenido del modal */
 .modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 70%;                 /* menos ancho que la pantalla */
+  width: 70%;                 /* ancho moderado */
   max-width: 800px;           /* límite máximo */
-  max-height: 90vh;           /* ocupa casi toda la altura */
-  overflow-y: auto;           /* scroll interno si hay muchas páginas */
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-align: center;         /* centra títulos y textos */
+
+  margin: auto;               /* asegura centrado dentro del flex */
 }
+
 
 #close {
   position: absolute;
