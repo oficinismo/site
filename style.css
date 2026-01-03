@@ -5,7 +5,7 @@
 
 .site-header img {
   max-width: 100%;     /* se adapta al ancho de la pantalla */
-  max-height: 500px;   /* límite de altura para que no sea tan alto */
+  max-height: 500px;   /* límite de altura */
   height: auto;        /* mantiene proporción */
   object-fit: contain; /* asegura que no se deforme */
   border-radius: 8px;
@@ -16,7 +16,6 @@
   font-size: 1.8em;
   color: #0d6efd;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -70,29 +69,12 @@ h1 {
 
 /* Modal */
 .comic-modal {
-  display: none; /* importante: oculto por defecto */
+  display: none; /* oculto por defecto */
   position: fixed;
   z-index: 3000;
   inset: 0;
   background-color: rgba(0,0,0,0.5);
-  align-items: center;
-  justify-content: center;
-}
-
-
-  /* centrado con flexbox */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.comic-modal {
-  display: none;
-  position: fixed;
-  z-index: 3000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
+  display: flex;             /* centrado con flexbox */
   align-items: center;
   justify-content: center;
 }
@@ -122,19 +104,18 @@ h1 {
 }
 
 .modal-pdf {
-  display: flex;             /* usamos flexbox */
-  justify-content: center;   /* centramos horizontalmente */
-  align-items: center;       /* centramos verticalmente dentro del bloque */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
 #comic-pdf {
-  flex: 0 0 auto;            /* evita que se estire */
-  width: 70%;                /* ocupa el 70% del ancho del modal */
-  max-width: 900px;          /* límite para que no se vea demasiado ancho */
-  height: 75vh;              /* gran parte de la altura */
+  flex: 0 0 auto;
+  width: 70%;
+  max-width: 900px;
+  height: 75vh;
   border: none;
-  margin: 0 auto;            /* asegura centrado si hay espacio extra */
+  margin: 0 auto;
   display: block;
 }
-
