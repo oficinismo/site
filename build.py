@@ -60,7 +60,10 @@ def build_index():
       <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <h1>Catálogo de Cómics</h1>
+    <header class="site-header">
+        <img src="images/header.jpg" alt="Header del catálogo">
+        <h1>Catálogo de Cómics</h1>
+    </header>
       <div class="catalogo">
         {''.join(html_items)}
       </div>
