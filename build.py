@@ -78,7 +78,7 @@ def main():
             <span id="close-comic" class="close">&times;</span>
             <div id="comic-modal-body" class="modal-info"></div>
             <div class="modal-pdf">
-                <iframe id="comic-pdf"></iframe>
+                <iframe id="comic-pdf" style="width:100%;height:600px;" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -91,6 +91,11 @@ def main():
             const pdfFrame = document.getElementById('comic-pdf');
             const closeBtn = document.getElementById('close-comic');
 
+            // Configuración de tu repo en GitHub
+            const repoUser = "oficinismo";
+            const repoName = "catalogo";
+            const branch = "main";
+
             cards.forEach(card => {{
                 card.addEventListener('click', () => {{
                     const titulo = card.getAttribute('data-titulo');
@@ -99,7 +104,7 @@ def main():
                     const anio = card.getAttribute('data-anio');
                     const precio = card.getAttribute('data-precio');
                     const descripcion = card.querySelector('.descripcion')?.innerHTML || '';
-                    const pdf = card.getAttribute('data-pdf');
+                    const pdf = card.getAttribute('data-pdf'); // ej: "pdfs/catalogo1.pdf"
 
                     modalBody.innerHTML = `
                         <h2>${{titulo}}</h2>
@@ -109,7 +114,11 @@ def main():
                         <p><strong>Precio:</strong> CLP ${{precio}}</p>
                         <div class="descripcion">${{descripcion}}</div>
                     `;
-                    pdfFrame.src = pdf;
+
+                    // Construir URL pública para Google Docs Viewer
+                    const pdfUrl = `https://docs.google.com/viewer?url=https://raw.githubusercontent.com/${{repoUser}}/${{repoName}}/${{branch}}/${{pdf}}&embedded=true`;
+
+                    pdfFrame.src = pdfUrl;
                     modal.style.display = 'flex';
                 }});
             }});
