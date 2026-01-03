@@ -36,14 +36,14 @@
              data-autor="Oficinismo"
              data-editorial="Oficinismo"
              data-anio="2020"
-             data-precio="12000"
+             data-precio="10000"
              data-pdf="pdfs/boletin_rata_1_y_2.pdf">
             <img src="images/boletin_rata_1_y_2.jpg" alt="Boletín rata 1 y 2">
             <h3>Boletín rata 1 y 2</h3>
             <p><strong>Autor:</strong> Oficinismo</p>
             <p><strong>Editorial:</strong> Oficinismo</p>
             <p><strong>Año:</strong> 2020</p>
-            <p><strong>Precio:</strong> CLP 12000</p>
+            <p><strong>Precio:</strong> CLP 10000</p>
             <div class="descripcion" style="display:none;"><p>Un clásico de oficinismo</p></div>
         </div>
         
@@ -55,7 +55,7 @@
             <span id="close-comic" class="close">&times;</span>
             <div id="comic-modal-body" class="modal-info"></div>
             <div class="modal-pdf">
-                <iframe id="comic-pdf"></iframe>
+                <iframe id="comic-pdf" style="width:100%;height:600px;" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -68,6 +68,11 @@
             const pdfFrame = document.getElementById('comic-pdf');
             const closeBtn = document.getElementById('close-comic');
 
+            // Configuración de tu repo en GitHub
+            const repoUser = "oficinismo";
+            const repoName = "catalogo";
+            const branch = "main";
+
             cards.forEach(card => {
                 card.addEventListener('click', () => {
                     const titulo = card.getAttribute('data-titulo');
@@ -76,7 +81,7 @@
                     const anio = card.getAttribute('data-anio');
                     const precio = card.getAttribute('data-precio');
                     const descripcion = card.querySelector('.descripcion')?.innerHTML || '';
-                    const pdf = card.getAttribute('data-pdf');
+                    const pdf = card.getAttribute('data-pdf'); // ej: "pdfs/catalogo1.pdf"
 
                     modalBody.innerHTML = `
                         <h2>${titulo}</h2>
@@ -86,7 +91,11 @@
                         <p><strong>Precio:</strong> CLP ${precio}</p>
                         <div class="descripcion">${descripcion}</div>
                     `;
-                    pdfFrame.src = pdf;
+
+                    // Construir URL pública para Google Docs Viewer
+                    const pdfUrl = `https://docs.google.com/viewer?url=https://raw.githubusercontent.com/${repoUser}/${repoName}/${branch}/${pdf}&embedded=true`;
+
+                    pdfFrame.src = pdfUrl;
                     modal.style.display = 'flex';
                 });
             });
