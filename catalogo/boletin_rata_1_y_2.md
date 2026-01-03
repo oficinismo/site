@@ -5,6 +5,6 @@ editorial: "Oficinismo"
 anio: 2020
 precio: 15000
 imagen: "boletin_rata_1_y_2.jpg"   # portada para la tarjeta
-pdf: "boletin_rata_1_y_2.pdf"      # cómic completo
+paginas: "boletin_rata_1_y_2"      # cómic completo
 ---
 Un clásico de oficinismo
