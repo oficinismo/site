@@ -50,7 +50,7 @@ def build_index():
             """
             html_items.append(card_html)
 
-    # Plantilla básica del index.html
+    # Plantilla completa con modal incluido
     html_output = f"""
     <!DOCTYPE html>
     <html lang="es">
@@ -65,7 +65,7 @@ def build_index():
         {''.join(html_items)}
       </div>
 
-      <!-- Modal -->
+      <!-- Modal generado por build.py -->
       <div id="modal" class="modal">
         <div class="modal-content">
           <span id="close">&times;</span>
