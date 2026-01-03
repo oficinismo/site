@@ -32,7 +32,6 @@ def build_index():
             autor = meta.get("autor", "")
             editorial = meta.get("editorial", "")
             anio = meta.get("anio", "")
-            precio = meta.get("precio", "")
             imagen = meta.get("imagen", "")       # portada en images/
             paginas = meta.get("paginas", "")     # subcarpeta en images/
 
@@ -42,7 +41,6 @@ def build_index():
                  data-autor="{autor}"
                  data-editorial="{editorial}"
                  data-anio="{anio}"
-                 data-precio="{precio}"
                  data-paginas="{paginas}">
               <img src="images/{imagen}" alt="{titulo}">
               <h3>{titulo}</h3>
