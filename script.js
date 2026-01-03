@@ -1,3 +1,4 @@
+// Selecciona elementos
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modal-body");
 const closeBtn = document.getElementById("close");
@@ -5,15 +6,17 @@ const closeBtn = document.getElementById("close");
 // Selecciona todas las tarjetas
 const cards = document.querySelectorAll(".comic-card");
 
+// Función para abrir modal con datos de la tarjeta
 cards.forEach(card => {
-  card.addEventListener('click', () => {
-    const titulo = card.getAttribute('data-titulo');
-    const autor = card.getAttribute('data-autor');
-    const editorial = card.getAttribute('data-editorial');
-    const anio = card.getAttribute('data-anio');
-    const precio = card.getAttribute('data-precio');
-    const carpeta = card.getAttribute('data-paginas'); // ej: "comic1"
+  card.addEventListener("click", () => {
+    const titulo = card.getAttribute("data-titulo");
+    const autor = card.getAttribute("data-autor");
+    const editorial = card.getAttribute("data-editorial");
+    const anio = card.getAttribute("data-anio");
+    const precio = card.getAttribute("data-precio");
+    const carpeta = card.getAttribute("data-paginas"); // ej: "comic1"
 
+    // Contenido textual
     modalBody.innerHTML = `
       <h2>${titulo}</h2>
       <p><strong>Autor:</strong> ${autor}</p>
@@ -22,12 +25,12 @@ cards.forEach(card => {
       <p><strong>Precio:</strong> CLP ${precio}</p>
     `;
 
-    // Generar galería simple
+    // Galería de imágenes
     const gallery = document.createElement("div");
     gallery.classList.add("gallery");
 
-    // Suponiendo que cada cómic tiene páginas numeradas 1.jpg, 2.jpg, etc.
-    for (let i = 1; i <= 10; i++) { // ajusta el máximo según tu caso
+    // Intentar cargar hasta 20 páginas numeradas
+    for (let i = 1; i <= 20; i++) {
       const img = document.createElement("img");
       img.src = `images/${carpeta}/${i}.jpg`;
       img.onerror = () => img.remove(); // si no existe, se elimina
@@ -36,7 +39,9 @@ cards.forEach(card => {
     }
 
     modalBody.appendChild(gallery);
-    modal.style.display = 'flex';
+
+    // Mostrar modal
+    modal.style.display = "flex";
   });
 });
 
@@ -51,3 +56,4 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+
