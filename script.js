@@ -13,7 +13,6 @@ cards.forEach(card => {
     const autor = card.getAttribute("data-autor");
     const editorial = card.getAttribute("data-editorial");
     const anio = card.getAttribute("data-anio");
-    const precio = card.getAttribute("data-precio");
     const carpeta = card.getAttribute("data-paginas"); // ej: "comic1"
 
     // Contenido textual
@@ -22,7 +21,6 @@ cards.forEach(card => {
       <p><strong>Autor:</strong> ${autor}</p>
       <p><strong>Editorial:</strong> ${editorial}</p>
       <p><strong>Año:</strong> ${anio}</p>
-      <p><strong>Precio:</strong> CLP ${precio}</p>
     `;
 
     // Galería de imágenes
