@@ -30,11 +30,11 @@ cards.forEach(card => {
     gallery.classList.add("gallery");
 
     // Intentar cargar hasta 20 páginas numeradas
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 100; i++) {
       const img = document.createElement("img");
       img.src = `images/${carpeta}/${i}.jpg`;
       img.onerror = () => img.remove(); // si no existe, se elimina
-      img.style.maxWidth = "100%";
+      img.style.maxWidth = "90%";
       gallery.appendChild(img);
     }
 
