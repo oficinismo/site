@@ -1,0 +1,140 @@
+.site-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.site-header img {
+  max-width: 100%;     /* se adapta al ancho de la pantalla */
+  max-height: 500px;   /* límite de altura para que no sea tan alto */
+  height: auto;        /* mantiene proporción */
+  object-fit: contain; /* asegura que no se deforme */
+  border-radius: 8px;
+}
+
+.site-header h1 {
+  margin-top: 10px;
+  font-size: 1.8em;
+  color: #0d6efd;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0d6efd;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 800px;
+  margin: 30px auto;
+  gap: 20px;
+}
+
+.comic-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-5px);
+}
+
+.comic-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.comic-card h3 {
+  margin: 10px 0 5px;
+  color: #212529;
+}
+
+.comic-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal */
+.comic-modal {
+  display: none; /* importante: oculto por defecto */
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+
+  /* centrado con flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comic-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comic-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1000px;
+  height: 90vh;             /* ocupa casi toda la altura */
+  overflow-y: auto;         /* scroll interno */
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-info {
+  margin-bottom: 20px;
+}
+
+.modal-pdf {
+  display: flex;             /* usamos flexbox */
+  justify-content: center;   /* centramos horizontalmente */
+  align-items: center;       /* centramos verticalmente dentro del bloque */
+  width: 100%;
+}
+
+#comic-pdf {
+  flex: 0 0 auto;            /* evita que se estire */
+  width: 70%;                /* ocupa el 70% del ancho del modal */
+  max-width: 900px;          /* límite para que no se vea demasiado ancho */
+  height: 75vh;              /* gran parte de la altura */
+  border: none;
+  margin: 0 auto;            /* asegura centrado si hay espacio extra */
+  display: block;
+}
+
