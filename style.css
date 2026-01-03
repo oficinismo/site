@@ -68,29 +68,32 @@ h1 {
 }
 
 /* Modal */
+/* Modal overlay */
 .modal {
   display: none;              /* oculto por defecto */
   position: fixed;            /* se fija sobre toda la pantalla */
   top: 0; left: 0;
-  width: 80%; height: 90%;  /* cubre toda la ventana */
+  width: 100%; height: 100%;  /* cubre toda la ventana */
   background-color: rgba(0,0,0,0.7);
   z-index: 3000;
+  display: flex;
   justify-content: center;    /* centra horizontal */
   align-items: center;        /* centra vertical */
 }
 
+/* Contenido del modal */
 .modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 800px;
-  max-height: 90vh;
-  overflow-y: auto;
+  width: 70%;                 /* menos ancho que la pantalla */
+  max-width: 800px;           /* límite máximo */
+  max-height: 90vh;           /* ocupa casi toda la altura */
+  overflow-y: auto;           /* scroll interno si hay muchas páginas */
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;         /* centra títulos y textos */
 }
-
 
 #close {
   position: absolute;
@@ -100,17 +103,17 @@ h1 {
   cursor: pointer;
 }
 
-.modal-info {
-  margin-bottom: 20px;
-}
-
+/* Galería de imágenes dentro del modal */
 .gallery {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;     /* imágenes una debajo de otra */
+  align-items: center;        /* centradas horizontalmente */
   gap: 10px;
 }
 
 .gallery img {
-  max-width: 100%;
+  max-width: 100%;            /* se adapta al ancho del modal */
+  height: auto;
   border-radius: 4px;
 }
+
