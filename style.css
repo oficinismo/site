@@ -87,7 +87,7 @@ h1 {
   padding: 20px;              /* espacio interno */
   border-radius: 8px;
   width: 80%;                 /* más estrecho */
-  max-width: 700px;           /* límite máximo */
+  max-width: 1000px;           /* límite máximo */
   max-height: 85vh;           /* un poco menos alto */
   overflow-y: auto;
   position: relative;
