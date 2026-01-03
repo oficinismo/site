@@ -5,6 +5,6 @@ editorial: "Oficinismo"
 anio: 2025
 precio: 12000
 imagen: "memes.jpg"   # portada para la tarjeta
-pdf: "memes"      # cómic completo
+paginas: "memes"      # cómic completo
 ---
 Un clásico de oficinismo
