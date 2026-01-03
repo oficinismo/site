@@ -72,7 +72,7 @@ h1 {
   display: none;              /* oculto por defecto */
   position: fixed;            /* se fija sobre toda la pantalla */
   top: 0; left: 0;
-  width: 100%; height: 100%;  /* cubre toda la ventana */
+  width: 80%; height: 90%;  /* cubre toda la ventana */
   background-color: rgba(0,0,0,0.7);
   z-index: 3000;
   justify-content: center;    /* centra horizontal */
