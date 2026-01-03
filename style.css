@@ -69,6 +69,7 @@ h1 {
 
 /* Modal */
 /* Modal overlay */
+/* Modal overlay */
 .modal {
   display: none;              /* oculto por defecto */
   position: fixed;            /* se fija sobre toda la pantalla */
@@ -82,27 +83,29 @@ h1 {
   align-items: center;        /* centra vertical */
 }
 
+/* Contenido del modal */
 .modal-content {
   background: #fff;
-  padding: 20px;
+  padding: 30px 20px 20px;    /* más espacio arriba para el botón */
   border-radius: 8px;
-  width: 70%;                 /* ancho moderado */
-  max-width: 800px;           /* límite máximo */
-  max-height: 90vh;
+  width: 60%;                 /* más estrecho */
+  max-width: 700px;           /* límite máximo */
+  max-height: 85vh;           /* un poco menos alto */
   overflow-y: auto;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-
-  margin: auto;               /* asegura centrado dentro del flex */
+  margin: auto;
+  text-align: center;         /* centra títulos y textos */
 }
 
-
+/* Botón de cierre */
 #close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
+  top: 8px;                   /* más cerca del borde superior */
+  right: 12px;
+  font-size: 22px;            /* un poco más pequeño */
   cursor: pointer;
+  color: #333;
 }
 
 /* Galería de imágenes dentro del modal */
@@ -110,12 +113,13 @@ h1 {
   display: flex;
   flex-direction: column;     /* imágenes una debajo de otra */
   align-items: center;        /* centradas horizontalmente */
-  gap: 10px;
+  gap: 12px;
 }
 
 .gallery img {
-  max-width: 100%;            /* se adapta al ancho del modal */
+  max-width: 90%;             /* no ocupar todo el ancho */
   height: auto;
   border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
