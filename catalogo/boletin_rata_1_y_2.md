@@ -3,7 +3,7 @@ titulo: "Boletín rata 1 y 2"
 autor: "Oficinismo"
 editorial: "Oficinismo"
 anio: 2020
-precio: 12000
+precio: 10000
 imagen: "boletin_rata_1_y_2.jpg"   # portada para la tarjeta
 pdf: "boletin_rata_1_y_2.pdf"      # cómic completo
 ---
