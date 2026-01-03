@@ -29,7 +29,7 @@ cards.forEach(card => {
     const gallery = document.createElement("div");
     gallery.classList.add("gallery");
 
-    // Intentar cargar hasta 20 páginas numeradas
+    // Intentar cargar hasta 100 páginas numeradas
     for (let i = 1; i <= 100; i++) {
       const img = document.createElement("img");
       img.src = `images/${carpeta}/${i}.jpg`;
@@ -45,15 +45,19 @@ cards.forEach(card => {
   });
 });
 
-// Cerrar modal al hacer clic en la X
-closeBtn.addEventListener("click", () => {
+// Función para cerrar y limpiar modal
+function cerrarModal() {
   modal.style.display = "none";
-});
+  modalBody.innerHTML = ""; // limpia contenido al cerrar
+}
+
+// Cerrar modal al hacer clic en la X
+closeBtn.addEventListener("click", cerrarModal);
 
 // Cerrar modal al hacer clic fuera del contenido
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
-    modal.style.display = "none";
+    cerrarModal();
   }
 });
 
