@@ -201,3 +201,26 @@ h1 {
   color: #0d6efd;             /* color de los links */
   font-weight: bold;
 }
+
+.nav-links2 {
+  display: flex;                  /* coloca los links en fila */
+  justify-content: center;        /* centrados en la portada */
+  gap: 40px;                      /* espacio entre ellos */
+  margin: 30px 0;
+}
+
+.nav-links2 a {
+  text-decoration: none;          /* sin subrayado */
+  color: #fff;                    /* texto blanco */
+  background-color: #0d6efd;      /* azul estilo Bootstrap */
+  padding: 10px 20px;             /* espacio interno */
+  border-radius: 6px;             /* esquinas redondeadas */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links2 a:hover {
+  background-color: #0b5ed7;      /* azul más oscuro al pasar el mouse */
+  transform: scale(1.05);         /* efecto de zoom suave */
+}
+
