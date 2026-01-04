@@ -82,9 +82,9 @@ def build_catalogo():
         <img src="catalogo/images/header.jpg" alt="Header del catálogo">
         <h1>Catálogo de Cómics</h1>
     </header>
-    <nav>
+    <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
-       <a href="index.html">Ir al blog ➡</a>
+      <a href="index.html">Ir al blog ➡</a>
     </nav>
       <div class="catalogo">
         {''.join(html_items)}
@@ -145,7 +145,7 @@ def build_blog():
         <img src="catalogo/images/header.jpg" alt="Header del blog">
         <h1>Blog</h1>
     </header>
-    <nav>
+    <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
       <a href="index.html">Ir al catálogo ➡</a>
     </nav>
