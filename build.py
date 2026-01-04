@@ -141,7 +141,7 @@ def build_blog():
     </head>
     <body>
     <header class="site-header">
-        <img src="blog/images/header.jpg" alt="Header del blog">
+        <img src="catalogo/images/header.jpg" alt="Header del blog">
         <h1>Blog</h1>
     </header>
     <nav>
