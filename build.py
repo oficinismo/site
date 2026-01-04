@@ -42,7 +42,7 @@ def build_catalogo():
             items.append(meta)
 
     # Ordenar por fecha descendente
-    items.sort(key=lambda x: x.get("fecha_dt"), reverse=True)
+    items.sort(key=lambda x: x.get("fecha_dt"))
 
     html_items = []
     for meta in items:
