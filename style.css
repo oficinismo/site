@@ -114,8 +114,10 @@ h1 {
 }
 
 .gallery img {
-  max-width: 90%;             /* no ocupar todo el ancho */
-  height: auto;
+  width: 100%;        /* ocupa todo el ancho del contenedor */
+  max-width: 700px;   /* límite máximo */
+  height: auto;       /* mantiene proporción */
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
