@@ -12,7 +12,7 @@ cards.forEach(card => {
     const titulo = card.getAttribute("data-titulo");
     const autor = card.getAttribute("data-autor");
     const editorial = card.getAttribute("data-editorial");
-    const anio = card.getAttribute("data-anio");
+    const fecha = card.getAttribute("data-fecha");
     const carpeta = card.getAttribute("data-paginas"); // ej: "comic1"
 
     // Contenido textual
@@ -20,7 +20,7 @@ cards.forEach(card => {
       <h2>${titulo}</h2>
       <p><strong>Autor:</strong> ${autor}</p>
       <p><strong>Editorial:</strong> ${editorial}</p>
-      <p><strong>Año:</strong> ${anio}</p>
+      <p><strong>fecha:</strong> ${fecha}</p>
     `;
 
     // Galería de imágenes
@@ -30,7 +30,7 @@ cards.forEach(card => {
     // Intentar cargar hasta 100 páginas numeradas
     for (let i = 1; i <= 100; i++) {
       const img = document.createElement("img");
-      img.src = `images/${carpeta}/${i}.jpg`;
+      img.src = `catalogo/images/${carpeta}/${i}.jpg`;
       img.onerror = () => img.remove(); // si no existe, se elimina
       img.style.maxWidth = "90%";
       gallery.appendChild(img);
