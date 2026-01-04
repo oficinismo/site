@@ -1,4 +1,4 @@
-name: Build catálogo
+name: Build sitio
 
 on:
   push:
@@ -27,10 +27,10 @@ jobs:
       - name: Run build.py
         run: python build.py
 
-      - name: Commit and push generated index.html
+      - name: Commit and push generated templates
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Auto-build index.html" || echo "No changes to commit"
+          git add templates/catalogo.html templates/blog.html
+          git commit -m "Auto-build catálogo y blog" || echo "No changes to commit"
           git push
