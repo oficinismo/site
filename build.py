@@ -90,12 +90,10 @@ def build_catalogo():
         {''.join(html_items)}
       </div>
           <!-- Modal -->
-    <div id="comic-modal" class="comic-modal">
-        <div class="comic-modal-content">
-            <span id="close-comic" class="close">&times;</span>
-            <div id="comic-modal-body" class="modal-info"></div>
-            <div class="modal-pdf">
-                <iframe id="comic-pdf"></iframe>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div id="modal-body" </div>
             </div>
         </div>
     </div>
