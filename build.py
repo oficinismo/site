@@ -84,6 +84,7 @@ def build_catalogo():
     </header>
     <nav>
       <a href="index.html">⬅ Volver a la portada</a>
+       <a href="index.html">Ir al blog ➡</a>
     </nav>
       <div class="catalogo">
         {''.join(html_items)}
@@ -146,6 +147,7 @@ def build_blog():
     </header>
     <nav>
       <a href="index.html">⬅ Volver a la portada</a>
+      <a href="index.html">Ir al catálogo ➡</a>
     </nav>
       <div class="blog">
         {''.join(html_posts)}
