@@ -6,8 +6,8 @@ from datetime import datetime
 CATALOGO_DIR = "catalogo"
 BLOG_DIR = "blog"
 
-CATALOGO_OUT = "templates/catalogo.html"
-BLOG_OUT = "templates/blog.html"
+CATALOGO_OUT = "catalogo.html"
+BLOG_OUT = "blog.html"
 
 def parse_markdown(file_path):
     """
