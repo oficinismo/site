@@ -82,6 +82,9 @@ def build_catalogo():
         <img src="catalogo/images/header.jpg" alt="Header del catálogo">
         <h1>Catálogo de Cómics</h1>
     </header>
+    <nav>
+      <a href="index.html">⬅ Volver a la portada</a>
+    </nav>
       <div class="catalogo">
         {''.join(html_items)}
       </div>
@@ -142,6 +145,9 @@ def build_blog():
         <img src="blog/images/header.jpg" alt="Header del blog">
         <h1>Blog</h1>
     </header>
+    <nav>
+      <a href="index.html">⬅ Volver a la portada</a>
+    </nav>
       <div class="blog">
         {''.join(html_posts)}
       </div>
