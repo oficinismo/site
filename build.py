@@ -134,6 +134,7 @@ def build_blog():
     <head>
       <meta charset="UTF-8">
       <title>Blog</title>
+      <img src="catalogo/images/header.jpg" alt="Header del catálogo">
       <link rel="stylesheet" href="style.css">
     </head>
     <body>
