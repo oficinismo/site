@@ -76,6 +76,14 @@ def build_catalogo():
       <meta charset="UTF-8">
       <title>Catálogo de Cómics</title>
       <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D62YB7ZPC7"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-D62YB7ZPC7');
+        </script>
     </head>
     <body>
     <header class="site-header">
@@ -152,6 +160,14 @@ def build_blog():
       <meta charset="UTF-8">
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D62YB7ZPC7"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-D62YB7ZPC7');
+        </script>
     </head>
     <body>
     <header class="site-header">
