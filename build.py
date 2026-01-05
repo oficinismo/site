@@ -101,7 +101,7 @@ def build_catalogo():
     </header>
     <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
-      <a href="index.html">Ir al blog ➡</a>
+      <a href="blog.html">Ir al blog ➡</a>
     </nav>
     <!-- Botón Buy Me a Coffee --> 
     <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> ☕ Si te gusta el contenido, invitame un café </a>
@@ -194,7 +194,7 @@ def build_blog():
     </header>
     <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
-      <a href="index.html">Ir al catálogo ➡</a>
+      <a href="catalogo.html">Ir al catálogo ➡</a>
     </nav>
       <div class="blog">
         {''.join(html_posts)}
