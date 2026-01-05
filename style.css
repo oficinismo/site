@@ -255,4 +255,44 @@ h1 {
   margin: 20px auto 0 auto;
 }
 
+.site-footer {
+  background-color: #f0f0f0; /* gris claro */
+  color: #333;              /* texto gris oscuro */
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.site-footer .footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  margin: 0 0 10px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* azul suave al pasar el mouse */
+}
 
