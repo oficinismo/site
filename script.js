@@ -40,7 +40,7 @@ cards.forEach(card => {
 
 // Botón Buy Me a Coffee 
     const donateBtn = document.createElement("a"); 
-    donateBtn.href = "https://www.buymeacoffee.com/nombreDeLaAutora"; 
+    donateBtn.href = "https://www.buymeacoffee.com/oficinismo"; 
     donateBtn.target = "_blank"; donateBtn.className = "btn-donar"; 
     donateBtn.textContent = "☕ Si te gusta el contenido, invítame un café";
     modalBody.appendChild(donateBtn);
