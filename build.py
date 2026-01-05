@@ -77,12 +77,12 @@ def build_catalogo():
       <title>Catálogo de Cómics</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D62YB7ZPC7"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script> 
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-D62YB7ZPC7');
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'G-H5DNJ259YR');
         </script>
     </head>
     <body>
@@ -161,12 +161,12 @@ def build_blog():
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D62YB7ZPC7"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script> 
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-D62YB7ZPC7');
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'G-H5DNJ259YR');
         </script>
     </head>
     <body>
