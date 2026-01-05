@@ -119,6 +119,18 @@ def build_catalogo():
             </div>
         </div>
     </div>
+      <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Oficinismo - Todos los derechos reservados</p>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
+          <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
+          <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
+          <li><a href="oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+        </ul>
+        <p>Desarrollo de sitio por Warren B.</p>
+      </div>
+    </footer>
       <script src="script.js"></script>
     </body>
     </html>
@@ -199,6 +211,18 @@ def build_blog():
       <div class="blog">
         {''.join(html_posts)}
       </div>
+     <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Oficinismo - Todos los derechos reservados</p>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
+          <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
+          <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
+          <li><a href="oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+        </ul>
+        <p>Desarrollo de sitio por Warren B.</p>
+      </div>
+     </footer>
     </body>
     </html>
     """
