@@ -43,7 +43,7 @@ cards.forEach(card => {
     donateBtn.href = "https://www.buymeacoffee.com/nombreDeLaAutora"; 
     donateBtn.target = "_blank"; donateBtn.className = "btn-donar"; 
     donateBtn.textContent = "☕ Si te gusta el contenido, invítame un café";
-    
+    modalBody.appendChild(donateBtn);
     // Mostrar modal
     modal.style.display = "flex";
   });
