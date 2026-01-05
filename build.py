@@ -89,7 +89,7 @@ def build_catalogo():
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script> 
         <script>
            window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
+           function gtag(){{dataLayer.push(arguments);}}
            gtag('js', new Date());
            gtag('config', 'G-H5DNJ259YR');
         </script>
@@ -126,7 +126,7 @@ def build_catalogo():
           <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
           <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
           <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
-          <li><a href="oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+          <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
         </ul>
         <p>Desarrollo de sitio por Warren B.</p>
       </div>
@@ -218,7 +218,7 @@ def build_blog():
           <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
           <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
           <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
-          <li><a href="oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+          <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
         </ul>
         <p>Desarrollo de sitio por Warren B.</p>
       </div>
