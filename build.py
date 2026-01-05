@@ -112,7 +112,7 @@ def build_catalogo():
     <div id="modal" class="modal">
         <div class="modal-content">
             <span id="close" class="close">&times;</span>
-            <div id="modal-body" 
+            <div id="modal-body"> 
              <!-- Botón Buy Me a Coffee --> 
              <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> ☕ Si te gusta el contenido, invitame un café </a>
             </div>
