@@ -38,6 +38,12 @@ cards.forEach(card => {
 
     modalBody.appendChild(gallery);
 
+// Botón Buy Me a Coffee 
+    const donateBtn = document.createElement("a"); 
+    donateBtn.href = "https://www.buymeacoffee.com/nombreDeLaAutora"; 
+    donateBtn.target = "_blank"; donateBtn.className = "btn-donar"; 
+    donateBtn.textContent = "☕ Si te gusta el contenido, invítame un café";
+    
     // Mostrar modal
     modal.style.display = "flex";
   });
