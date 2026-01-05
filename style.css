@@ -224,3 +224,35 @@ h1 {
   transform: scale(1.05);         /* efecto de zoom suave */
 }
 
+/* Botón Buy Me a Coffee */
+.btn-donar {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 15px;
+  background-color: #ffdd00; /* color oficial BMC */
+  color: #333;              /* texto oscuro para contraste */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover: efecto visual al pasar el mouse */
+.btn-donar:hover {
+  background-color: #ffe84d; /* tono más claro */
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Opcional: centrado dentro del modal */
+#modal-body .btn-donar {
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 auto;
+}
+
+
