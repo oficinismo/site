@@ -74,6 +74,15 @@ def build_catalogo():
     <html lang="es">
     <head>
       <meta charset="UTF-8">
+      <meta name="description" content="Catálogo de cómics de Oficinismo.">
+      <meta property="og:title" content="Catálogo de Cómics">
+      <meta property="og:description" content="Catálogo de cómics de Oficinismo.">
+      <meta property="og:url" content="https://oficinismo.cl/catalogo">
+      <meta property="og:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Catálogo de Cómics">
+      <meta name="twitter:description" content="Catálogo de cómics de Oficinismo.">
+      <meta name="twitter:image" content="https://oficinismo.cl/preview.jpg">
       <title>Catálogo de Cómics</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
@@ -158,6 +167,15 @@ def build_blog():
     <html lang="es">
     <head>
       <meta charset="UTF-8">
+      <meta name="description" content="Información, novedades y leseras">
+      <meta property="og:title" content="El blog de Oficinismo.">
+      <meta property="og:description" content="El blog de Oficinismo.">
+      <meta property="og:url" content="https://oficinismo.cl/blog">
+      <meta property="og:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="El blog de Oficinismo.">
+      <meta name="twitter:description" content="Información, novedades y leseras">
+      <meta name="twitter:image" content="https://oficinismo.cl/preview.jpg">
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
