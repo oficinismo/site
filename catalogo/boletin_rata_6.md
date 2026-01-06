@@ -2,7 +2,7 @@
 titulo: "Una aventura de: Perro Chico (Boletín Rata #6)" 
 autor: "Oficinismo"
 editorial: "Oficinismo"
-fecha: Mayo, 2022 
+fecha: 01/05/2022
 imagen: "boletin_rata_6.jpg"   # portada para la tarjeta o miniatura antes de abrir el comic
 paginas: "boletin_rata_6"      # nombre de la carpeta donde están las imagenes del comic
 --- 
