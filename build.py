@@ -48,8 +48,6 @@ def build_catalogo():
     for meta in items:
         titulo = meta.get("titulo", "")
         autor = meta.get("autor", "")
-        editorial = meta.get("editorial", "")
-        anio = meta.get("anio", "")
         fecha = meta.get("fecha", "")
         imagen = meta.get("imagen", "")
         paginas = meta.get("paginas", "")
@@ -58,8 +56,6 @@ def build_catalogo():
         <div class="comic-card"
              data-titulo="{titulo}"
              data-autor="{autor}"
-             data-editorial="{editorial}"
-             data-anio="{anio}"
              data-fecha="{fecha}"
              data-paginas="{paginas}">
           <img src="catalogo/images/{imagen}" alt="{titulo}">
