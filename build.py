@@ -112,7 +112,6 @@ def build_catalogo():
              <!-- Botón Buy Me a Coffee --> 
              <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> ☕ Si te gusta el contenido, invitame un café </a>
             </div>
-            </div>
         </div>
     </div>
       <footer class="site-footer">
