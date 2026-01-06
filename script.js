@@ -18,7 +18,6 @@ cards.forEach(card => {
     modalBody.innerHTML = `
       <h2>${titulo}</h2>
       <p><strong>Autor:</strong> ${autor}</p>
-      <p><strong>Editorial:</strong> ${editorial}</p>
       <p><strong>Fecha:</strong> ${fecha}</p>
     `;
 
