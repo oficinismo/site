@@ -11,7 +11,6 @@ cards.forEach(card => {
   card.addEventListener("click", () => {
     const titulo = card.getAttribute("data-titulo");
     const autor = card.getAttribute("data-autor");
-    const editorial = card.getAttribute("data-editorial");
     const fecha = card.getAttribute("data-fecha");
     const carpeta = card.getAttribute("data-paginas"); // ej: "comic1"
 
