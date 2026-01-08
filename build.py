@@ -132,6 +132,7 @@ def build_catalogo():
           <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
           <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
           <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
         </ul>
         <p>Desarrollo de sitio por Warren B.</p>
       </div>
@@ -224,6 +225,7 @@ def build_blog():
           <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
           <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
           <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
         </ul>
         <p>Desarrollo de sitio por Warren B.</p>
       </div>
