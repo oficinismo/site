@@ -90,11 +90,6 @@ def build_catalogo():
            gtag('config', 'G-H5DNJ259YR');
         </script>
     </head>
-    <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0">
-    </script>
     <header class="site-header">
         <img src="catalogo/images/header.jpg" alt="Header del catálogo">
         <h1>Catálogo de Cómics</h1>
@@ -118,11 +113,19 @@ def build_catalogo():
             </div>
         </div>
     </div>
-    <div class="fb-comments" 
-         data-href="https://oficinismo.cl/catalogo.html" 
-         data-width="80%" 
-         data-numposts="10">
+    <!-- SDK de Facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v18.0&appId=1944239163145025">
+    </script>
+
+    <!-- Caja de comentarios -->
+    <div class="fb-comments"
+     data-href="https://oficinismo.cl/catalogo.html"
+     data-width="80%"
+     data-numposts="5">
     </div>
+
 
       <footer class="site-footer">
       <div class="footer-content">
