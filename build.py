@@ -91,6 +91,10 @@ def build_catalogo():
         </script>
     </head>
     <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0">
+    </script>
     <header class="site-header">
         <img src="catalogo/images/header.jpg" alt="Header del catálogo">
         <h1>Catálogo de Cómics</h1>
@@ -114,11 +118,6 @@ def build_catalogo():
             </div>
         </div>
     </div>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0">
-    </script>
-
     <div class="fb-comments" 
          data-href="https://oficinismo.github.io/site/catalogo.html" 
          data-width="80%" 
