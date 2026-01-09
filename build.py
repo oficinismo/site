@@ -117,6 +117,25 @@ def build_catalogo():
             </div>
         </div>
     </div>
+    <div class="comentarios">
+    <section id="comentarios-catalogo">
+    <h2>Comentarios del catálogo</h2>
+    <script src="https://giscus.app/client.js"
+          data-repo="oficinismo/site"
+          data-repo-id="ID-del-repo"
+          data-category="Comentarios"
+          data-category-id="ID-de-la-categoría"
+          data-mapping="specific"
+          data-term="catalogo"
+          data-reactions-enabled="1"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="es"
+          crossorigin="anonymous"
+          async>
+    </script>
+  </section>
+  </div>
     <!-- Footer -->
       <footer class="site-footer">
       <div class="footer-content">
