@@ -22,18 +22,27 @@ cards.forEach(card => {
     `;
 
     // Galería de imágenes
-    const gallery = document.createElement("div");
-    gallery.classList.add("gallery");
+  const gallery = document.createElement("div");
+  gallery.classList.add("gallery");
 
-    for (let i = 1; i <= 100; i++) {
-      const img = document.createElement("img");
-      img.src = `catalogo/images/${carpeta}/${i}.jpg`;
-      img.onerror = () => img.remove();
-      img.style.maxWidth = "90%";
-      gallery.appendChild(img);
-    }
+  for (let i = 1; i <= 100; i++) {
+    const img = document.createElement("img");
 
-    modalBody.appendChild(gallery);
+    // Primero intentamos con JPG
+    img.src = `catalogo/images/${carpeta}/${i}.jpg`;
+
+    // Si falla, probamos con PNG
+    img.onerror = () => {
+    img.src = `catalogo/images/${carpeta}/${i}.png`;
+    img.onerror = () => img.remove(); // si tampoco existe, lo eliminamos
+    };
+
+    img.style.maxWidth = "90%";
+    gallery.appendChild(img);
+  }
+
+  modalBody.appendChild(gallery);
+
 
     // Botón Buy Me a Coffee
     const donateBtn = document.createElement("a"); 
