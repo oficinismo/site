@@ -78,7 +78,7 @@ def build_catalogo():
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Catálogo de Cómics">
       <meta name="twitter:description" content="Catálogo de cómics de Oficinismo.">
-      <meta name="twitter:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
       <title>Catálogo de Cómics</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
@@ -207,7 +207,7 @@ def build_blog():
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="El blog de Oficinismo.">
       <meta name="twitter:description" content="Información, novedades y leseras">
-      <meta name="twitter:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
         <!-- Google tag (gtag.js) -->
