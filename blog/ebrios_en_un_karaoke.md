@@ -8,11 +8,15 @@ tags: ["comics"]
 
 Lo que empezó como una inocente salida a ver a Deplasticoverde en el Museo Histórico, con Micetos y Cuchara, terminó en un karaoke, cantando con el mismísimo Salvador Allende, en el restorán "El rincón de arriba". Acá va el cómic que hicimos cuando íbamos como en la sexta Cristal de 1.2 litros.
 
-  <img src="images/2_karaoke.png" class="center">
-  <img src="images/3_karaoke.png" class="center">
-  <img src="images/4_karaoke.png" class="center">
-  <img src="images/5_karaoke.png" class="center">
-  <img src="images/6_karaoke.png" class="center">
+  <img src="images/2_karaoke.png" alt="karaoke 2" class="center">
+  
+  <img src="images/3_karaoke.png" alt="karaoke 3" class="center">
+  
+  <img src="images/4_karaoke.png" alt="karaoke 4" class="center">
+  
+  <img src="images/5_karaoke.png" alt="karaoke 5" class="center">
+  
+  <img src="images/6_karaoke.png" alt="karaoke 6" class="center">
 
 Gracias por leer.
 
