@@ -82,6 +82,14 @@ def build_catalogo():
       <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
       <title>Catálogo de Cómics</title>
       <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script> 
+        <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){{dataLayer.push(arguments);}}
+           gtag('js', new Date());
+           gtag('config', 'G-H5DNJ259YR');
+        </script>
     </head>
     <body>
     <!-- Header -->
@@ -94,15 +102,58 @@ def build_catalogo():
       <a href="index.html">⬅ Volver a la portada</a>
       <a href="blog.html">Ir al blog ➡</a>
     </nav>
+    <!-- Botón Buy Me a Coffee --> 
+    <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> 
+    ☕ Si te gusta el contenido, invitame un café </a>
       <div class="catalogo">
         {''.join(html_items)}
       </div>
+     <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div id="modal-body"> 
+             <!-- Botón Buy Me a Coffee --> 
+             <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> 
+             ☕ Si te gusta el contenido, invitame un café </a>
+            </div>
+        </div>
+    </div>
+    <div class="comentarios">
+    <section id="comentarios-catalogo">
+    <h2>Comentarios del catálogo</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="oficinismo/site"
+        data-repo-id="R_kgDOQzFHOg"
+        data-category="General"
+        data-category-id="DIC_kwDOQzFHOs4C0wnh"
+        data-mapping="specific"
+        data-term="Catalogo"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+  </script>
+  </section>
+  </div>
     <!-- Footer -->
       <footer class="site-footer">
       <div class="footer-content">
         <p>&copy; 2026 Oficinismo - Todos los derechos reservados</p>
+        <ul class="social-links">
+        <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
+        <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
+        <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
+        <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+        </ul>
+        <p>Desarrollo de sitio por Warren B.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
     </body>
     </html>
     """
@@ -156,8 +207,25 @@ def build_blog():
     <html lang="es">
     <head>
       <meta charset="UTF-8">
+      <meta name="description" content="Información, novedades y leseras">
+      <meta property="og:title" content="El blog de Oficinismo.">
+      <meta property="og:description" content="El blog de Oficinismo.">
+      <meta property="og:url" content="https://oficinismo.cl/blog">
+      <meta property="og:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="El blog de Oficinismo.">
+      <meta name="twitter:description" content="Información, novedades y leseras">
+      <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
+      <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script> 
+        <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){{dataLayer.push(arguments);}}
+           gtag('js', new Date());
+           gtag('config', 'G-H5DNJ259YR');
+        </script>
     </head>
     <body>
     <header class="site-header">
@@ -171,9 +239,37 @@ def build_blog():
       <div class="blog">
         {''.join(html_posts)}
       </div>
+       <div class="comentarios">
+    <section id="comentarios-blog">
+    <h2>Comentarios del blog</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="oficinismo/site"
+        data-repo-id="R_kgDOQzFHOg"
+        data-category="General"
+        data-category-id="DIC_kwDOQzFHOs4C0wnh"
+        data-mapping="specific"
+        data-term="Blog"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+  </script>
+  </section>
+  </div>
      <footer class="site-footer">
       <div class="footer-content">
         <p>&copy; 2026 Oficinismo - Todos los derechos reservados</p>
+          <ul class="social-links">
+          <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
+          <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
+          <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
+          <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+        </ul>
+        <p>Desarrollo de sitio por Warren B.</p>
       </div>
      </footer>
     </body>
