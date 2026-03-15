@@ -342,10 +342,10 @@ p  { font-size: 1rem; line-height: 1.6; }
   /* 🔧 Ajuste especial: botones de portada lado a lado */
   .portada .nav-links2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    flex-wrap: nowrap;     /* evita que bajen */
+    flex-wrap: wrap;     /* evita que bajen */
     max-width: 100%;       /* no se salen del viewport */
     overflow-x: auto;      /* si no caben, se puede hacer scroll horizontal */
   }
