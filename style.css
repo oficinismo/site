@@ -339,18 +339,22 @@ p  { font-size: 1rem; line-height: 1.6; }
     font-size: 1.1rem;
   }
 
-    .portada .nav-links2 {
-    flex-direction: column;    
-    gap: 1rem;                 /* espacio entre ellos */
-    flex-wrap: wrap;           /* permite que bajen si no caben */
-    justify-content: center;   /* centrados en pantalla */
+  /* 🔧 Ajuste especial: botones de portada lado a lado */
+  .portada .nav-links2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;     /* evita que bajen */
+    max-width: 100%;       /* no se salen del viewport */
+    overflow-x: auto;      /* si no caben, se puede hacer scroll horizontal */
   }
 
   .portada .nav-links2 a {
-    padding: 0.3rem 0.3rem;   /* más compacto */
-    font-size: 0.8rem;         /* texto moderado */
-    flex: 1 1 auto;            /* se adaptan al ancho disponible */
-    max-width: 10rem;          /* límite para que no crezcan demasiado */
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    flex: 0 0 auto;        /* no se estiran demasiado */
+    max-width: 8rem;       /* límite de ancho por botón */
     text-align: center;
   }
 
