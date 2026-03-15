@@ -340,21 +340,21 @@ p  { font-size: 1rem; line-height: 1.6; }
   }
 
   /* Botones de navegación más cómodos */
-.nav-links2 {
+  .nav-links2 {
     flex-direction: row;       /* se mantienen en fila */
     gap: 1rem;                 /* espacio entre ellos */
     flex-wrap: wrap;           /* permite que bajen si no caben */
     justify-content: center;   /* centrados en pantalla */
   }
 
-.nav-links2 a {
+  .nav-links2 a {
     padding: 0.5rem 0.5rem;   /* más compacto */
     font-size: 0.9rem;         /* texto moderado */
     flex: 1 1 auto;            /* se adaptan al ancho disponible */
     max-width: 10rem;          /* límite para que no crezcan demasiado */
     text-align: center;
   }
-}
+
 
   /* Botón de café más grande */
   .btn-donar {
