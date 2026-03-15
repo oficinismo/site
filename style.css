@@ -133,6 +133,36 @@ p  { font-size: 1rem; line-height: 1.6; }
   font-size: 0.9rem;
 }
 
+/* ===== Botón Donar ===== */
+.btn-donar {
+  display: inline-block;
+  padding: 0.625rem 1.125rem;   /* 10px 18px */
+  margin-top: 0.9375rem;        /* 15px */
+  background-color: #ffdd00;
+  color: var(--footer-text);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;              /* escala con html */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.375rem;      /* 6px */
+  transition: all 0.3s ease;
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.15);
+}
+
+.btn-donar:hover {
+  background-color: #ffe84d;
+  color: #000;
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.25);
+}
+
+#modal-body .btn-donar {
+  display: block;
+  text-align: center;
+  margin: 1.25rem auto 0 auto;
+}
+
+
 /* ===== Responsive: móviles ===== */
 @media (max-width: 600px) {
   html { font-size: 18px; } /* aumenta base en móviles */
