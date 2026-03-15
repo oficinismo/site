@@ -322,8 +322,7 @@ p  { font-size: 1rem; line-height: 1.6; }
   margin: 0 0 0.937
 
 /* ===== Responsive: móviles ===== */
-@media (max-width: 600px) {
-  /* Subimos el tamaño base */
+@media screen and (max-width: 600px) {
 
   /* Ajustamos encabezados */
   h1 { font-size: 4rem; }
