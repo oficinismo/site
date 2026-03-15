@@ -1,34 +1,65 @@
+/* ===== Variables de color ===== */
+:root {
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --card-border: #ddd;
+  --text-color: #212529;
+  --text-muted: #555;
+  --link-color: #0d6efd;
+  --link-hover: #084298;
+  --footer-bg: #f0f0f0;
+  --footer-text: #333;
+  --modal-overlay: rgba(0,0,0,0.7);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+  --text-color: #e0e0e0;
+  --text-muted: #aaa;
+  --link-color: #82aaff;
+  --link-hover: #a3d4ff;
+  --footer-bg: #1a1a1a;
+  --footer-text: #ccc;
+  --modal-overlay: rgba(0,0,0,0.8);
+}
+
+/* ===== Header ===== */
 .site-header {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .site-header img {
-  max-width: 100%;     /* se adapta al ancho de la pantalla */
-  max-height: 500px;   /* límite de altura */
-  height: auto;        /* mantiene proporción */
-  object-fit: contain; /* asegura que no se deforme */
+  max-width: 100%;
+  max-height: 500px;
+  height: auto;
+  object-fit: contain;
   border-radius: 8px;
 }
 
 .site-header h1 {
   margin-top: 10px;
   font-size: 1.8em;
-  color: #0d6efd;
+  color: var(--link-color);
 }
 
+/* ===== Body ===== */
 body {
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  background: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-  color: #0d6efd;
+  color: var(--link-color);
 }
 
+/* ===== Catálogo ===== */
 .catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -38,8 +69,8 @@ h1 {
 }
 
 .comic-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -58,65 +89,60 @@ h1 {
 
 .comic-card h3 {
   margin: 10px 0 5px;
-  color: #212529;
+  color: var(--text-color);
 }
 
 .comic-card p {
   margin: 4px 0;
   font-size: 14px;
-  color: #555;
+  color: var(--text-muted);
 }
 
-/* Modal overlay */
+/* ===== Modal ===== */
 .modal {
-  display: none;              /* oculto por defecto */
-  position: fixed;            /* se fija sobre toda la pantalla */
+  display: none;
+  position: fixed;
   top: 0; left: 0;
-  width: 100%; height: 100%;  /* cubre toda la ventana */
-  background-color: rgba(0,0,0,0.7);
+  width: 100%; height: 100%;
+  background-color: var(--modal-overlay);
   z-index: 3000;
-
-  /* centrado con flexbox */
   justify-content: center;
   align-items: center;
 }
 
-/* Contenido del modal */
 .modal-content {
-  background: #fff;
-  padding: 20px;              /* espacio interno */
+  background: var(--card-bg);
+  padding: 20px;
   border-radius: 8px;
-  width: 80%;                 /* más estrecho */
-  max-width: 1000px;           /* límite máximo */
-  max-height: 85vh;           /* un poco menos alto */
+  width: 80%;
+  max-width: 1000px;
+  max-height: 85vh;
   overflow-y: auto;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-align: center;         /* centra títulos y textos */
+  text-align: center;
 }
 
-/* Botón de cierre */
 #close {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 22px;
   cursor: pointer;
-  color: #333;
+  color: var(--text-color);
 }
 
-/* Galería de imágenes dentro del modal */
 .gallery {
   display: flex;
-  flex-direction: column;     /* imágenes una debajo de otra */
-  align-items: center;        /* centradas horizontalmente */
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
 .gallery img {
-  width: 100%;        /* ocupa todo el ancho del contenedor */
-  max-width: 700px;   /* límite máximo */
-  height: auto;       /* mantiene proporción */
+  width: 100%;
+  max-width: 700px;
+  height: auto;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -130,7 +156,7 @@ h1 {
 
 .portada h1 {
   font-size: 2em;
-  color: #0d6efd;
+  color: var(--link-color);
 }
 
 .portada nav ul {
@@ -143,13 +169,13 @@ h1 {
 
 .portada nav a {
   text-decoration: none;
-  color: #0d6efd;
+  color: var(--link-color);
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .portada nav a:hover {
-  color: #084298;
+  color: var(--link-hover);
 }
 
 /* ===== Blog ===== */
@@ -162,8 +188,8 @@ h1 {
 }
 
 .blog-post {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -171,7 +197,7 @@ h1 {
 
 .blog-post h2 {
   margin-top: 0;
-  color: #0d6efd;
+  color: var(--link-color);
 }
 
 .blog-post img {
@@ -181,7 +207,7 @@ h1 {
 }
 
 .blog-post p {
-  color: #555;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
@@ -190,47 +216,48 @@ h1 {
   line-height: 1.6;
 }
 
+/* ===== Navegación ===== */
 .nav-links {
-  display: flex;              /* activa flexbox */
-  justify-content: space-between; /* separa los elementos a los extremos */
-  margin: 20px;               /* espacio alrededor */
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 .nav-links a {
-  text-decoration: none;      /* quita subrayado */
-  color: #0d6efd;             /* color de los links */
+  text-decoration: none;
+  color: var(--link-color);
   font-weight: bold;
 }
 
 .nav-links2 {
-  display: flex;                  /* coloca los links en fila */
-  justify-content: center;        /* centrados en la portada */
-  gap: 40px;                      /* espacio entre ellos */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   margin: 30px 0;
 }
 
 .nav-links2 a {
-  text-decoration: none;          /* sin subrayado */
-  color: #fff;                    /* texto blanco */
-  background-color: #fff;      /* azul estilo Bootstrap */
-  padding: 10px 20px;             /* espacio interno */
-  border-radius: 6px;             /* esquinas redondeadas */
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--link-color);
+  padding: 10px 20px;
+  border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links2 a:hover {
-  background-color: #0b5ed7;      /* azul más oscuro al pasar el mouse */
-  transform: scale(1.05);         /* efecto de zoom suave */
+  background-color: var(--link-hover);
+  transform: scale(1.05);
 }
 
-/* Botón Buy Me a Coffee */
+/* ===== Botón Donar ===== */
 .btn-donar {
   display: inline-block;
   padding: 10px 18px;
   margin-top: 15px;
-  background-color: #ffdd00; /* color oficial BMC */
-  color: #333;              /* texto oscuro para contraste */
+  background-color: #ffdd00;
+  color: var(--footer-text);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -240,24 +267,23 @@ h1 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Hover: efecto visual al pasar el mouse */
 .btn-donar:hover {
-  background-color: #ffe84d; /* tono más claro */
+  background-color: #ffe84d;
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-/* Opcional: centrado dentro del modal */
 #modal-body .btn-donar {
   display: block;
   text-align: center;
   margin: 20px auto 0 auto;
 }
 
+/* ===== Footer ===== */
 .site-footer {
-  background-color: #f0f0f0; /* gris claro */
-  color: #333;              /* texto gris oscuro */
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 20px 0;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -276,7 +302,7 @@ h1 {
 .social-links {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px; /* agrega 15px debajo */
+  margin: 0 0 15px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -288,34 +314,34 @@ h1 {
 
 .social-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--footer-text);
   transition: color 0.3s ease;
-  font-size: 16px; /* un poco más grande que el texto base */
-  font-weight: 500; /* opcional, para dar más presencia */
+  font-size: 16px;
+  font-weight: 500;
 }
-
 
 .social-links a:hover {
-  color: #0077b5; /* azul suave al pasar el mouse */
+  color: var(--link-color);
 }
 
+/* ===== Main ===== */
 .main {
   max-width: 720px;
   margin: 0 auto;
-  background: #fff;       /* opcional, para diferenciar del fondo */
+  background: var(--card-bg);
   padding: 2rem;
-  border-radius: 8px;     /* opcional, esquinas suaves */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* opcional, ligera sombra */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .main p {
   margin-bottom: 1rem;
-  color: #555;            /* tono gris para legibilidad */
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 .main a {
-  color: #0d6efd;         /* azul consistente con tu sitio */
+  color: var(--link-color);
   text-decoration: none;
 }
 
