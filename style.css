@@ -324,18 +324,15 @@ p  { font-size: 1rem; line-height: 1.6; }
 /* ===== Responsive: móviles ===== */
 @media (max-width: 600px) {
   /* Subimos el tamaño base */
-  html {
-    font-size: 30px; /* antes 16px */
-  }
 
   /* Ajustamos encabezados */
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.6rem; }
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3rem; }
+  h3 { font-size: 2rem; }
 
   /* Párrafos un poco más grandes */
   p, .blog-post p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   /* Botón de modo oscuro más grande */
