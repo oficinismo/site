@@ -341,8 +341,8 @@ p  { font-size: 1rem; line-height: 1.6; }
 
   /* Botones de navegación más cómodos */
   .nav-links2 a {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 0.3rem 0.3rem;
+    font-size: 0.8rem;
   }
 
   /* Botón de café más grande */
