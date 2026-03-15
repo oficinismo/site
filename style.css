@@ -315,3 +315,45 @@ p  { font-size: 1rem; line-height: 1.6; }
   list-style: none;
   padding: 0;
   margin: 0 0 0.937
+
+/* ===== Responsive: móviles ===== */
+@media (max-width: 600px) {
+  /* Subimos el tamaño base */
+  html {
+    font-size: 20px; /* antes 16px */
+  }
+
+  /* Ajustamos encabezados */
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.6rem; }
+
+  /* Párrafos un poco más grandes */
+  p, .blog-post p {
+    font-size: 1.2rem;
+  }
+
+  /* Botón de modo oscuro más grande */
+  #theme-toggle {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Botones de navegación más cómodos */
+  .nav-links2 a {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Botón de café más grande */
+  .btn-donar {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Links sociales más visibles */
+  .social-links a {
+    font-size: 1.2rem;
+  }
+}
+
