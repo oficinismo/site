@@ -220,6 +220,7 @@ p  { font-size: 1rem; line-height: 1.6; }
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-direction: row;
 }
 
 .nav-links2 a {
@@ -341,10 +342,11 @@ p  { font-size: 1rem; line-height: 1.6; }
     font-size: 1.1rem;
   }
 
-  .nav-links2 img {
-    width: 150px;/* más pequeño en móvil */
+  .nav-links2 {
+    flex-direction: column; /* columna en móvil */
+    align-items: center;    /* centrado vertical */
   }
-
+  
   /* Botón de café más grande */
   .btn-donar {
     padding: 1rem 1.5rem;
