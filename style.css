@@ -253,6 +253,7 @@ p  { font-size: 1rem; line-height: 1.6; }
   display: flex;
   justify-content: center;
   gap: 0.9375rem; /* antes 15px */
+  flex-direction: row;
 }
 
 .social-links li {
@@ -356,6 +357,8 @@ p  { font-size: 1rem; line-height: 1.6; }
   /* Links sociales más visibles */
   .social-links a {
     font-size: 1rem;
+    flex-direction: column;
+}
   }
 }
 
