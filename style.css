@@ -219,8 +219,7 @@ p  { font-size: 1rem; line-height: 1.6; }
 .nav-links2 {
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
-  margin: 1.875rem 0;
+  gap: 1rem;
 }
 
 .nav-links2 a {
@@ -240,7 +239,7 @@ p  { font-size: 1rem; line-height: 1.6; }
 }
 
 .nav-links2 img {
-  width: 250px;   
+  width: 20rem;   
   height: auto;
   border-radius: 0.5rem;
 }
