@@ -272,6 +272,7 @@ def build_blog():
         <p>Desarrollo de sitio por Warren B.</p>
       </div>
      </footer>
+     <script src="script.js"></script>
     </body>
     </html>
     """
