@@ -71,6 +71,7 @@ def build_catalogo():
     <html lang="es">
     <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Catálogo de cómics de Oficinismo.">
       <meta property="og:title" content="Catálogo de Cómics">
       <meta property="og:description" content="Catálogo de cómics de Oficinismo.">
@@ -207,6 +208,7 @@ def build_blog():
     <html lang="es">
     <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Información, novedades y leseras">
       <meta property="og:title" content="El blog de Oficinismo.">
       <meta property="og:description" content="El blog de Oficinismo.">
