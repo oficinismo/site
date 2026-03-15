@@ -353,7 +353,6 @@ p  { font-size: 1rem; line-height: 1.6; }
     max-width: 10rem;          /* límite para que no crezcan demasiado */
     text-align: center;
   }
-}
 
   /* Botón de café más grande */
   .btn-donar {
