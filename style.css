@@ -208,7 +208,7 @@ h1 {
 
 .blog-post p {
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .blog-post .post-body {
@@ -259,7 +259,7 @@ h1 {
   background-color: #ffdd00;
   color: var(--footer-text);
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
@@ -350,7 +350,7 @@ h1 {
 }
 
 html {
-  font-size: 24px; /* tamaño base */
+  font-size: 20px; /* tamaño base */
 }
 h1 { font-size: 2.2rem; }
 h2 { font-size: 1.8rem; }
