@@ -89,3 +89,41 @@ window.addEventListener("click", (event) => {
     cerrarModal();
   }
 });
+
+// script.js
+const root = document.documentElement;
+const toggle = document.createElement("button");
+
+// Configuración inicial del botón
+toggle.id = "theme-toggle";
+toggle.style.position = "fixed";
+toggle.style.bottom = "20px";
+toggle.style.right = "20px";
+toggle.style.padding = "10px 15px";
+toggle.style.borderRadius = "6px";
+toggle.style.border = "none";
+toggle.style.cursor = "pointer";
+toggle.style.background = "var(--link-color)";
+toggle.style.color = "#fff";
+toggle.style.fontWeight = "bold";
+toggle.textContent = "🌙 Modo oscuro";
+
+// Insertar el botón en la página
+document.body.appendChild(toggle);
+
+// Cargar preferencia guardada
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
+  toggle.textContent = savedTheme === "dark" ? "☀️ Modo claro" : "🌙 Modo oscuro";
+}
+
+// Alternar tema al hacer clic
+toggle.addEventListener("click", () => {
+  const currentTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", currentTheme);
+  localStorage.setItem("theme", currentTheme);
+
+  toggle.textContent = currentTheme === "dark" ? "☀️ Modo claro" : "🌙 Modo oscuro";
+});
+
