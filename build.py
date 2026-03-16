@@ -151,7 +151,7 @@ def build_catalogo():
         <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
         <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
         </ul>
-        <p>Desarrollo de sitio por Warren B.</p>
+        <p class="small">Desarrollo de sitio por Warren B.</p>
       </div>
     </footer>
     <script src="script.js"></script>
@@ -271,7 +271,7 @@ def build_blog():
           <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
           <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
         </ul>
-        <p>Desarrollo de sitio por Warren B.</p>
+        <p class="small">Desarrollo de sitio por Warren B.</p>
       </div>
      </footer>
      <script src="script.js"></script>
