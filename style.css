@@ -320,6 +320,10 @@ p  { font-size: 1rem; line-height: 1.6; }
   margin: 0 0 0.937;
 }
 
+.small {
+ font-size: 0,8rem;
+}
+
 /* ===== Responsive: móviles ===== */
 @media screen and (max-width: 600px) {
 
