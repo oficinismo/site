@@ -343,6 +343,12 @@ p  { font-size: 1rem; line-height: 1.6; }
     flex-direction: column; /* columna en móvil */
     align-items: center;    /* centrado vertical */
   }
+
+  .nav-links2 img {
+  width: 200px;   
+  .social-links li {
+  display: inline;
+}}
   
   /* Botón de café más grande */
   .btn-donar {
@@ -351,7 +357,7 @@ p  { font-size: 1rem; line-height: 1.6; }
   }
 
   /* Links sociales más visibles */
-  .social-links a {
+  .social-links {
     font-size: 1rem;
     flex-direction: column;
   }
