@@ -116,6 +116,14 @@ p  { font-size: 1rem; line-height: 1.6; }
   text-align: center;
 }
 
+/* Centrar modal y ajustar ancho en móviles */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 0 auto;       /* centra horizontalmente */
+    max-width: 90%;       /* ocupa el 90% del ancho */
+  }
+}
+
 #close {
   position: absolute;
   top: 0.625rem;
