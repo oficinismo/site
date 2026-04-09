@@ -140,24 +140,30 @@ function checkButtons() {
    Formulario de contacto con EmailJS
 ============================ */
 (function(){
-    emailjs.init({ publicKey: "JaaZcRyt-cDC-GiQf" });
+  emailjs.init("wIL9V5R0sbXQVzgHF"); // tu Public Key
 })();
 
-document.getElementById('formContacto').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById("formContacto").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    emailjs.sendForm('service_2j45sst', 'template_gj3tuwf', this)
-      .then(() => {
-        alert('Formulario enviado 🎉. ¡Gracias por tu pedido! Recibirás un correo con detalles de pago y opciones de envío.');
-        this.reset();
-        carrito = [];
-        total = 0;
-        actualizarCarrito();
-      }, (error) => {
-        alert('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.');
-        console.error('Error:', error);
-      });
+  // Actualiza los campos ocultos antes de enviar
+  document.getElementById("carrito").value = JSON.stringify(carrito);
+  document.getElementById("detallesPedido").value = JSON.stringify(detallesPedido);
+  document.getElementById("totalPedido").value = total;
+
+  emailjs.sendForm("service_2j45sst", "template_gj3tuwf", this)
+    .then(() => {
+      alert("Formulario enviado 🎉. ¡Gracias por tu pedido!");
+      this.reset();
+      carrito = [];
+      total = 0;
+      actualizarCarrito();
+    }, (error) => {
+      alert("Hubo un problema al enviar el formulario. Revisa la consola.");
+      console.error("Error:", error);
+    });
 });
+
 
 /* ============================
    Scroll suave a contacto
