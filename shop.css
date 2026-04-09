@@ -1,0 +1,215 @@
+/* ============================
+   Productos
+============================ */
+.producto {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  max-width: 150px !important;
+  height: auto;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+  transform: scale(1.2);
+}
+
+.producto span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.producto button {
+  margin-top: 0.5rem;
+  background-color: var(--link-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: var(--link-hover);
+}
+
+/* ============================
+   Botón flotante carrito
+============================ */
+.cart-float-btn {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1rem;
+  z-index: 1100;
+  background: var(--link-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#cart-count {
+  background: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   Modal carrito
+============================ */
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: var(--modal-overlay);
+}
+
+.cart-modal-content {
+  background: var(--card-bg);
+  color: var(--text-color);
+  margin: 10% auto;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  max-width: 50rem;
+  position: relative;
+  animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 0.625rem; right: 0.9375rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.cart-item span {
+  flex: 1;
+  color: var(--text-color);
+}
+
+.cart-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cart-item button:hover {
+  color: #dc3545;
+}
+
+.checkout-btn {
+  background: var(--text-muted);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: var(--link-hover);
+}
+
+/* ============================
+   Modal producto
+============================ */
+#imageModal img {
+  max-height: 700px;
+  object-fit: contain;
+}
+
+#prevBtn, #nextBtn {
+  margin: 0.5rem;
+}
+
+/* ============================
+   Formulario de contacto
+============================ */
+#contacto {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+#contacto h2 {
+  margin-bottom: 1rem;
+  color: var(--link-color);
+}
+
+#contacto button {
+  background-color: #198754;
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.25rem;
+}
+
+#contacto button:hover {
+  background-color: #157347;
+}
+
+/* ============================
+   Lupa de zoom
+============================ */
+.zoom-container {
+  position: relative;
+  display: inline-block;
+}
+
+#lupa {
+  position: absolute;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: none;          /* oculto por defecto */
+  pointer-events: none;   /* no bloquea el mouse */
+  z-index: 3000;          /* sobre el modal */
+}
+
+#lupa img {
+  position: absolute;
+  transform-origin: top left;
+}
