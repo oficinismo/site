@@ -152,6 +152,7 @@ document.getElementById("formContacto").addEventListener("submit", function(even
   document.getElementById("totalPedido").value = total;
 
   emailjs.sendForm("service_2j45sst", "template_gj3tuwf", this)
+  emailjs.sendForm("service_2j45sst", "template_4e2iqml", this)
     .then(() => {
       alert("Formulario enviado 🎉. ¡Gracias por tu pedido!");
       this.reset();
