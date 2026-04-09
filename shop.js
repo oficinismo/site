@@ -140,13 +140,13 @@ function checkButtons() {
    Formulario de contacto con EmailJS
 ============================ */
 (function(){
-    emailjs.init({ publicKey: "ds5KnZTHJ1_yDQF0W" });
+    emailjs.init({ publicKey: "JaaZcRyt-cDC-GiQf" });
 })();
 
 document.getElementById('formContacto').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_vp6o8jw', 'template_jqjt34n', this)
+    emailjs.sendForm('service_2j45sst', 'template_gj3tuwf', this)
       .then(() => {
         alert('Formulario enviado 🎉. ¡Gracias por tu pedido! Recibirás un correo con detalles de pago y opciones de envío.');
         this.reset();
