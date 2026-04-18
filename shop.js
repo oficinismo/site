@@ -5,7 +5,7 @@ let images = [];
 let currentIndex = 0;
 let carrito = [];
 let total = 0;
-let lupa = document.getElementById("lupa");
+
 
 
 /* ============================
@@ -106,32 +106,18 @@ function mostrarInfo(el) {
     const modalElement = document.getElementById('imageModal');
     const modal = new bootstrap.Modal(modalElement);
     modal.show();
-
-    // Activar lupa solo en escritorio
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        activarLupa(); // tu función que inicializa la lupa
-    }
 }
 
 function updateModalImage() {
     const img = document.getElementById('imgModal');
     img.src = images[currentIndex];
-
     // limpiar lupa
     if (lupa) {
         lupa.innerHTML = "";
         lupa.style.display = "none";
     }
-
-    // activar lupa solo en escritorio
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        activarLupa();
-    }
-
     checkButtons();
 }
-
-
 function prevImage() {
     if (currentIndex > 0) {
         currentIndex--;
