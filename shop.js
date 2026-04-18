@@ -104,17 +104,17 @@ function mostrarInfo(el) {
     const modalElement = document.getElementById('imageModal');
     const modal = new bootstrap.Modal(modalElement);
     modal.show();
-}
 
     // Activar lupa solo en escritorio
     if (window.matchMedia("(min-width: 768px)").matches) {
         activarLupa(); // tu función que inicializa la lupa
     }
-
+}
 
 function updateModalImage() {
     const img = document.getElementById('imgModal');
     img.src = images[currentIndex];
+
     // limpiar lupa
     if (lupa) {
         lupa.innerHTML = "";
@@ -125,9 +125,10 @@ function updateModalImage() {
     if (window.matchMedia("(min-width: 768px)").matches) {
         activarLupa();
     }
-   
+
     checkButtons();
 }
+
 
 function prevImage() {
     if (currentIndex > 0) {
