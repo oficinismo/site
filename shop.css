@@ -213,3 +213,10 @@
   position: absolute;
   transform-origin: top left;
 }
+
+/* Ocultar lupa en pantallas pequeñas */
+@media (max-width: 767px) {
+  #lupa {
+    display: none !important;
+  }
+}
