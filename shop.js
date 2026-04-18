@@ -106,6 +106,12 @@ function mostrarInfo(el) {
     modal.show();
 }
 
+    // Activar lupa solo en escritorio
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        activarLupa(); // tu función que inicializa la lupa
+    }
+
+
 function updateModalImage() {
     const img = document.getElementById('imgModal');
     img.src = images[currentIndex];
@@ -114,6 +120,12 @@ function updateModalImage() {
         lupa.innerHTML = "";
         lupa.style.display = "none";
     }
+
+    // activar lupa solo en escritorio
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        activarLupa();
+    }
+   
     checkButtons();
 }
 
