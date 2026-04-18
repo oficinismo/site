@@ -5,6 +5,8 @@ let images = [];
 let currentIndex = 0;
 let carrito = [];
 let total = 0;
+let lupa = document.getElementById("lupa");
+
 
 /* ============================
    Carrito de compras
