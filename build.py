@@ -104,6 +104,7 @@ def build_catalogo():
     <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
       <a href="blog.html">Ir al blog ➡</a>
+      <a href="comics.html">Ir a comics ➡</a>
     </nav>
     <!-- Botón Buy Me a Coffee --> 
     <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> 
