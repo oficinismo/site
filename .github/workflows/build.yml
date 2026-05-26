@@ -31,6 +31,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add catalogo.html blog.html
-          git commit -m "Auto-build catálogo y blog" || echo "No changes to commit"
+          git add catalogo.html blog.html comics.html
+          git commit -m "Auto-build catálogo, blog y comics" || echo "No changes to commit"
           git push
