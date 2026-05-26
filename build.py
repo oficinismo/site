@@ -5,9 +5,11 @@ from datetime import datetime
 
 CATALOGO_DIR = "catalogo"
 BLOG_DIR = "blog"
+COMICS_DIR = "comics"
 
 CATALOGO_OUT = "catalogo.html"
 BLOG_OUT = "blog.html"
+COMICS_OUT = "comics.html"
 
 def parse_markdown(file_path):
     """
@@ -399,7 +401,7 @@ def build_comics():
     </html>
     """
 
-    with open(BLOG_OUT, "w", encoding="utf-8") as f:
+    with open(COMICS_OUT, "w", encoding="utf-8") as f:
         f.write(html_output)
 
 if __name__ == "__main__":
