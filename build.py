@@ -315,7 +315,7 @@ def build_comics():
         fecha = meta.get("fecha", "")
         imagen = meta.get("imagen", "")
 
-        post_html = f"""
+        comics_html = f"""
         <article class="blog-post">
           <h2>{titulo}</h2>
           <p><em>{fecha}</em> — {autor}</p>
@@ -323,7 +323,7 @@ def build_comics():
           <div class="post-body">{meta.get("body","")}</div>
         </article>
         """
-        html_comics.append(post_html)
+        html_comics.append(comics_html)
 
     html_output = f"""
     <!DOCTYPE html>
