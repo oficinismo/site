@@ -403,10 +403,12 @@ def build_comics():
 
     with open(COMICS_OUT, "w", encoding="utf-8") as f:
         f.write(html_output)
-
+        
 if __name__ == "__main__":
     build_catalogo()
+    print("Catalogo OK")
     build_blog()
+    print("Blog OK")
     build_comics()
-
+    print("Comics OK")
 
