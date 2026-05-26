@@ -298,7 +298,7 @@ def build_comics():
                 meta["fecha_dt"] = datetime.min
 
             # Ajustar rutas si es necesario
-            body = body.replace('src="images/', 'src="blog/images/')
+            body = body.replace('src="images/', 'src="comics/images/')
 
             # Convertir Markdown a HTML
             body_html = markdown.markdown(body, extensions=["extra"], output_format="html5")
@@ -331,14 +331,14 @@ def build_comics():
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Información, novedades y leseras">
-      <meta property="og:title" content="El blog de Oficinismo.">
+      <meta name="description" content="Comics y leseras">
+      <meta property="og:title" content="Comics de Oficinismo.">
       <meta property="og:description" content="El blog de Oficinismo.">
       <meta property="og:url" content="https://oficinismo.cl/blog">
       <meta property="og:image" content="https://oficinismo.cl/preview.jpg">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="El blog de Oficinismo.">
-      <meta name="twitter:description" content="Información, novedades y leseras">
+      <meta name="twitter:title" content="Comics de Oficinismo.">
+      <meta name="twitter:description" content="Comics y leseras">
       <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
       <title>Blog</title>
       <link rel="stylesheet" href="style.css">
