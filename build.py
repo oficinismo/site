@@ -353,7 +353,7 @@ def build_comics():
     </head>
     <body>
     <header class="site-header">
-        <img src="catalogo/images/header.jpg" alt="Header del blog">
+        <img src="catalogo/images/header.jpg" alt="Header de comics">
         <h1>Comics</h1>
     </header>
     <nav class="nav-links">
@@ -361,6 +361,9 @@ def build_comics():
       <a href="catalogo.html">Ir al catálogo ➡</a>
       <a href="shop.html">Ir a la tienda ➡</a>
     </nav>
+    <!-- Botón Buy Me a Coffee --> 
+    <a href="https://www.buymeacoffee.com/oficinismo" target="_blank" class="btn-donar"> 
+    ☕ Si te gusta el contenido, invitame un café </a>
       <div class="blog">
         {''.join(html_comics)}
       </div>
