@@ -282,6 +282,129 @@ def build_blog():
     with open(BLOG_OUT, "w", encoding="utf-8") as f:
         f.write(html_output)
 
+def build_comics():
+    comics = []
+    for filename in os.listdir(COMICS_DIR):
+        if filename.endswith(".md"):
+            filepath = os.path.join(COMICS_DIR, filename)
+            meta, body = parse_markdown(filepath)
+
+            fecha_str = meta.get("fecha", "")
+            try:
+                meta["fecha_dt"] = datetime.strptime(fecha_str, "%d/%m/%Y")
+            except:
+                meta["fecha_dt"] = datetime.min
+
+            # Ajustar rutas si es necesario
+            body = body.replace('src="images/', 'src="blog/images/')
+
+            # Convertir Markdown a HTML
+            body_html = markdown.markdown(body, extensions=["extra"], output_format="html5")
+            meta["body"] = body_html
+
+            comics.append(meta)
+
+    comics.sort(key=lambda x: x.get("fecha_dt"), reverse=True)
+
+    html_comics = []
+    for meta in comics:
+        titulo = meta.get("titulo", "")
+        autor = meta.get("autor", "")
+        fecha = meta.get("fecha", "")
+        imagen = meta.get("imagen", "")
+
+        post_html = f"""
+        <article class="blog-post">
+          <h2>{titulo}</h2>
+          <p><em>{fecha}</em> — {autor}</p>
+          {'<img src="comics/images/' + imagen + '" alt="' + titulo + '" + class="center">' if imagen else ''}
+          <div class="post-body">{meta.get("body","")}</div>
+        </article>
+        """
+        html_comics.append(post_html)
+
+    html_output = f"""
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Información, novedades y leseras">
+      <meta property="og:title" content="El blog de Oficinismo.">
+      <meta property="og:description" content="El blog de Oficinismo.">
+      <meta property="og:url" content="https://oficinismo.cl/blog">
+      <meta property="og:image" content="https://oficinismo.cl/preview.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="El blog de Oficinismo.">
+      <meta name="twitter:description" content="Información, novedades y leseras">
+      <meta name="twitter:image" content="https://oficinismo.cl/img/preview.jpg">
+      <title>Blog</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5DNJ259YR"></script>
+        <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){{dataLayer.push(arguments);}}
+           gtag('js', new Date());
+           gtag('config', 'G-H5DNJ259YR');
+        </script>
+    </head>
+    <body>
+    <header class="site-header">
+        <img src="catalogo/images/header.jpg" alt="Header del blog">
+        <h1>Blog</h1>
+    </header>
+    <nav class="nav-links">
+      <a href="index.html">⬅ Volver a la portada</a>
+      <a href="catalogo.html">Ir al catálogo ➡</a>
+    </nav>
+      <div class="blog">
+        {''.join(html_comics)}
+      </div>
+       <div class="comentarios">
+    <section id="comentarios-blog">
+    <h2>Comentarios del blog</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="oficinismo/site"
+        data-repo-id="R_kgDOQzFHOg"
+        data-category="General"
+        data-category-id="DIC_kwDOQzFHOs4C0wnh"
+        data-mapping="specific"
+        data-term="Blog"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+  </script>
+  </section>
+  </div>
+     <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Oficinismo - Todos los derechos reservados</p>
+          <ul class="social-links">
+          <li><a href="https://instagram.com/oficinismo" target="_blank">Instagram</a></li>
+          <li><a href="https://patreon.com/oficinismo" target="_blank">Patreon</a></li>
+          <li><a href="https://boletinrata.substack.com" target="_blank">Substack</a></li>
+          <li><a href="mailto:oficinisma@gmail.com" target="_blank">Contacto oficinisma@gmail.com</a></li>
+        </ul>
+        <p class="small">Desarrollo de sitio por Warren B.</p>
+      </div>
+     </footer>
+     <script src="script.js"></script>
+    </body>
+    </html>
+    """
+
+    with open(BLOG_OUT, "w", encoding="utf-8") as f:
+        f.write(html_output)
+
 if __name__ == "__main__":
     build_catalogo()
     build_blog()
+    build_comics()
+
+
