@@ -199,7 +199,7 @@ def build_blog():
         <article class="blog-post">
           <h2>{titulo}</h2>
           <p><em>{fecha}</em> — {autor}</p>
-          {'<img src="blog/images/' + imagen + '" alt="' + titulo + '" + class=center>' if imagen else ''}
+          {'<img src="blog/images/' + imagen + '" alt="' + titulo + '" + class="center">' if imagen else ''}
           <div class="post-body">{meta.get("body","")}</div>
         </article>
         """
