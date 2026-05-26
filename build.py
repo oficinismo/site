@@ -239,6 +239,7 @@ def build_blog():
     <nav class="nav-links">
       <a href="index.html">⬅ Volver a la portada</a>
       <a href="catalogo.html">Ir al catálogo ➡</a>
+      <a href="comics.html">Ir a comics ➡</a>
     </nav>
       <div class="blog">
         {''.join(html_posts)}
