@@ -370,8 +370,8 @@ def build_comics():
         {''.join(html_comics)}
       </div>
        <div class="comentarios">
-    <section id="comentarios-blog">
-    <h2>Comentarios del blog</h2>
+    <section id="comentarios-comics">
+    <h2>Comentarios de comics</h2>
     <script src="https://giscus.app/client.js"
         data-repo="oficinismo/site"
         data-repo-id="R_kgDOQzFHOg"
