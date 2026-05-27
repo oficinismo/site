@@ -1,5 +1,5 @@
 ---
-titulo: "Espiritu"
+titulo: "Espíritu"
 autor: "Oficinismo"
 fecha: "22/02/2026"
 # imagen: "ESPIRITU1.png" # Guardar las imagenes en la carpeta images, dentro de la carpeta comics. Descomenta esta linea para agregar image de portada al comic
